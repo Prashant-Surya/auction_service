@@ -1,0 +1,15 @@
+package: github.com/Prashant-Surya/auction-service/auction
+ignore:
+- github.com/Prashant-Surya/auction-service
+import:
+- package: github.com/gorilla/mux
+  version: v1.7.0
+- package: github.com/go-kit/kit
+  version: v0.8.0
+- package: github.com/go-logfmt/logfmt
+  version: ^0.4.0
+- package: github.com/juju/ratelimit
+  version: ^1.0.1
+- package: github.com/satori/go.uuid
+  version: ^1.2.0
+- package: github.com/golang/mock/gomock
