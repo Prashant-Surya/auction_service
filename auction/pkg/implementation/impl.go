@@ -25,7 +25,7 @@ var getBiddingCount = func() int {
 func (impl *serviceImpl) StartAuction(ctx context.Context, adPlacementID string) ([]*service.AuctionObject, error) {
 	logger := log.With(impl.logger, "method", "StartAuction")
 	level.Info(logger).Log("PlacementID", adPlacementID)
-	client := bidding_service.New("localhost:8080")
+	client := bidding_service.New("bidding:8080")
 	var wg sync.WaitGroup
 	var objects []*service.AuctionObject
 	timeOut := time.Millisecond * 200 / time.Duration(getBiddingCount())

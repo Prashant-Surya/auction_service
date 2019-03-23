@@ -1,0 +1,20 @@
+version: "2"
+services:
+  auction:
+    build:
+      context: .
+      dockerfile: auction/Dockerfile
+    restart: always
+    volumes:
+    - .:/go/src/github.com/Prashant-Surya/auction-service
+    container_name: auction
+    ports: ["8081:8081"]
+  bidding:
+    build:
+      context: .
+      dockerfile: bidding/Dockerfile
+    restart: always
+    volumes:
+    - .:/go/src/github.com/Prashant-Surya/auction-service
+    container_name: bidding
+    ports: ["8080:8080"]
